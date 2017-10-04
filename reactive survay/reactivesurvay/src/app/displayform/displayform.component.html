@@ -1,0 +1,23 @@
+<div [hidden]=isSubmitted>
+    <h1>preview your form</h1>
+        <table>
+            <tbody>
+                <tr *ngFor="let Question of QuestionArray">
+                    <td>
+                        <div class="form-group">
+                            <label>{{Question.ques}}</label>
+                                <input type="text" class="form-control">
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        
+    <button type="submit" (click)="onClickfn()" class="btn btn-primary" >is it ok?</button>
+</div>
+
+<div [hidden]=!isSubmitted>
+    <button  ng-if="link" type="submit" (click)="goToLinkFn()" class="btn btn-primary" >Generate Link?</button>  
+        <app-link></app-link>
+            <a routerLink="/surveyLink/{{nameOfCandidate}}" routerLinkActive="active">{{surveyLink}}</a>        
+</div>

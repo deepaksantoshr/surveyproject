@@ -1,0 +1,7 @@
+<button [hidden]=isSubmitted type="submit" (click)="getQuestions()" class="btn btn-primary" >Get Questions?</button>          
+  <div>
+    <ul *ngFor="let q of questions">
+      <li>{{q}}</li>
+        <input type="text" class="form-control">
+    </ul>
+  </div>

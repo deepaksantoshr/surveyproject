@@ -1,0 +1,10 @@
+<div [formGroup]="adressForm">
+        <div class="form-group col-xs-6">
+            <label>enter question here</label>
+            <input type="text" class="form-control" formControlName="ques">
+            <small [hidden]="adressForm.controls.ques.valid" class="text-danger">
+                 question required
+            </small>
+        </div>
+        
+    </div>
